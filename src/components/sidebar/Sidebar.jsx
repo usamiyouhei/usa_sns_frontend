@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Sidebar.css";
 import { Bookmark, Home, MessageRounded, Notifications, Person, Search, Settings } from "@mui/icons-material";
 
 
