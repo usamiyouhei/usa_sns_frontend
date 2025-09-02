@@ -27,6 +27,25 @@ function Rightbar() {
             <span className="rightbarUsername">usami</span>
           </li>
         </ul>
+        <p className="promotionTitle">プロモーション広告</p>
+          <img 
+            src="assets/promotion/promotion1.jpeg" 
+            alt="" 
+            className='rightbarPromotionImg'
+          />
+          <p className="promotionName">ショッピング</p>
+          <img 
+            src="assets/promotion/promotion2.jpeg" 
+            alt="" 
+            className='rightbarPromotionImg'
+          />
+          <p className="promotionName">カーショップ</p>
+          <img 
+            src="assets/promotion/promotion3.jpeg" 
+            alt="" 
+            className='rightbarPromotionImg'
+          />
+          <p className="promotionName">Usa株式会社</p>
       </div>
     </div>
   )
