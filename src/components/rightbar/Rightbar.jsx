@@ -15,6 +15,7 @@ function Rightbar() {
         <img src="assets/event.jpeg" alt="" className='eventImg'/>
         <h4 className="rightbarTitle">オンラインの友達</h4>
         <ul className="rightbarFriendList">
+
           {Users.map((user) => (
             <Online user={user} key={user.id}/>
           ))}
@@ -38,6 +39,16 @@ function Rightbar() {
             className='rightbarPromotionImg'
           />
           <p className="promotionName">Usa株式会社</p>
+
+          <li className="rightbarFriend">
+            <div className="rightbarProfileContainer">
+              <img src="assets/person/1.jpeg" alt="" />
+              <span className="rightbarOnline"></span>
+            </div>
+            <span className="rightbarUsername">sin code</span>
+          </li>
+        </ul>
+
       </div>
     </div>
   )

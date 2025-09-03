@@ -4,6 +4,7 @@ import { MoreVert } from "@mui/icons-material";
 import { Users } from "../../dummyData";
 
 
+
 function Post({ post }) {
     // const user = Users.filter((user) => user.id === 1)
     // console.log(user[0].username);
@@ -11,7 +12,7 @@ function Post({ post }) {
     // 押されているかの状態
     const [isLiked, setIsLiked] = useState(false)
 
-    // いいねの実装
+// いいね実装
     const handleLike = () => {
       setLike(isLiked ? like - 1 : like + 1)
       setIsLiked(!isLiked)
@@ -21,6 +22,7 @@ function Post({ post }) {
       <div className="postWrapper">
         <div className="postTop">
           <div className="postTopLeft">
+
             <img 
               src={Users.filter((user) => user.id === post.id)[0].profilePicture}
               alt=""
@@ -30,12 +32,14 @@ function Post({ post }) {
               {Users.filter((user) => user.id === post.id)[0].username}
             </span>
             <span className="postDate">{post.date}</span>
+
           </div>
         <div className="postTopRight">
           <MoreVert/>
         </div>
         </div>
         <div className="postCenter">
+
           <span className="postText">{post.desc}</span>
           <img src={post.photo} alt="" className='postImg'/>
         </div>
@@ -50,6 +54,7 @@ function Post({ post }) {
           </div>
           <div className="postBottomRight">
             <span className="postCommentText">{post.comment}:コメント</span>
+
           </div>
         </div>
       </div>
