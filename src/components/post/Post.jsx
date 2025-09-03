@@ -11,6 +11,7 @@ function Post({ post }) {
     // 押されているかの状態
     const [isLiked, setIsLiked] = useState(false)
 
+// いいね実装
     const handleLike = () => {
       setLike(isLiked ? like - 1 : like + 1)
       setIsLiked(!isLiked)
