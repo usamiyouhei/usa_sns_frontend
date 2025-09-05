@@ -4,10 +4,11 @@ import { Users } from "../../dummyData";
 import Online from "../online/Online";
 
 
-function Rightbar() {
-  return (
-    <div className='rightbar'>
-      <div className="rightbarWrapper">
+function Rightbar({ profile }) {
+
+  const HomeRightbar = () => {
+    return(
+      <div>
         <div className="eventContainer">
           <img src="assets/star.png" alt="" className='starImg'/>
           <span className="eventText"><b>フォロワー限定</b>イベント開催中！</span>
@@ -39,19 +40,73 @@ function Rightbar() {
             className='rightbarPromotionImg'
           />
           <p className="promotionName">Usa株式会社</p>
+        </div>
+    )
+  }
 
-          <li className="rightbarFriend">
-            <div className="rightbarProfileContainer">
-              <img src="assets/person/1.jpeg" alt="" />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarUsername">sin code</span>
-          </li>
-        </ul>
-
+  const ProfileRightbar = () => {
+    return(
+      <>
+      <h4 className='rightbarTitle'>ユーザー情報</h4>
+      <div className="rightbarInfo">
+        <div className="rightbarInfoItem">
+          <span className="rightbarInfoKey">出身:</span>
+          <span className="rightbarInfoKey">名古屋</span>
+        </div>
+        <h4 className="rightbarTitle">あなたの友達</h4>
+        <div className="rightbarFollowings">
+          <div className="rightbarFollowing">
+            <img
+              src="assets/person/1.png"
+              alt=""
+              className='rightbarFollowingImg'
+            />
+            <span className="rightbarFollowingName">Usa Code</span>
+          </div>
+          <div className="rightbarFollowing">
+            <img
+              src="assets/person/2.jpeg"
+              alt=""
+              className='rightbarFollowingImg'
+            />
+            <span className="rightbarFollowingName">suzuki</span>
+          </div>
+          <div className="rightbarFollowing">
+            <img
+              src="assets/person/3.jpeg"
+              alt=""
+              className='rightbarFollowingImg'
+            />
+            <span className="rightbarFollowingName">Yamada</span>
+          </div>
+          <div className="rightbarFollowing">
+            <img
+              src="assets/person/4.jpeg"
+              alt=""
+              className='rightbarFollowingImg'
+            />
+            <span className="rightbarFollowingName">sato</span>
+          </div>
+          <div className="rightbarFollowing">
+            <img
+              src="assets/person/5.jpeg"
+              alt=""
+              className='rightbarFollowingImg'
+            />
+            <span className="rightbarFollowingName">sugiura</span>
+          </div>
+        </div>
+      </div>
+      </>
+    )
+  }
+  return (
+    <div className='rightbar'>
+      <div className="rightbarWrapper">
+          {profile ? <ProfileRightbar/> : <HomeRightbar/>}
       </div>
     </div>
-  )
+  );
 }
 
 export default Rightbar
